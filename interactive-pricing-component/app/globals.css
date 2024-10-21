@@ -1,0 +1,119 @@
+:root {
+  /* Primary Colors */
+  --soft-cyan: hsl(174, 77%, 80%);
+  --strong-cyan: hsl(174, 86%, 45%);
+  --light-grayish-red: hsl(14, 92%, 95%);
+  --light-red: hsl(15, 100%, 70%);
+  --pale-blue: hsl(226, 100%, 87%);
+
+  /* Neutral Colors */
+  --white: hsl(0, 0%, 100%);
+  --very-pale-blue: hsl(230, 100%, 99%);
+  --light-grayish-blue: hsl(224, 65%, 95%);
+  --toggle-bg: hsl(223, 50%, 87%);
+  --grayish-blue: hsl(225, 20%, 60%);
+  --dark-desaturated-blue: hsl(227, 35%, 25%);
+  --dark-blue-blend: hsl(227, 40%, 15%); /* New darker blend color for better contrast */
+
+  /* Typography */
+  --font-family: 'Manrope', sans-serif;
+  --intro-font-size: 15px;
+
+  /* Spacing */
+  --padding-standard: 16px;
+  --border-radius: 8px;
+}
+
+body {
+  font-family: var(--font-family); /* Ensure global font usage */
+  background-color: var(--very-pale-blue);
+  color: var(--grayish-blue);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: var(--padding-standard);
+}
+
+/* Dark Mode Styles */
+body.dark {
+  background-color: var(--dark-blue-blend); /* Use darker blend color */
+  color: var(--white);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family);
+  color: var(--dark-desaturated-blue);
+  transition: color 0.3s ease; /* Smooth transitions */
+}
+
+body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark h6 {
+  color: var(--white);
+}
+
+p {
+  font-size: var(--intro-font-size);
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  color: var(--strong-cyan);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--soft-cyan);
+}
+
+/* Button Styling */
+button {
+  font-family: var(--font-family); /* Ensure button font usage */
+  padding: 8px 16px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode Button Styles */
+button.dark-mode-toggle {
+  background: var(--light-grayish-blue);
+  color: var(--dark-desaturated-blue);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark button,
+body.dark a {
+  background: var(--dark-blue-blend); /* Dark background to blend with header */
+  color: var(--white); /* Light color for better contrast */
+}
+
+/* Utility Classes */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rounded {
+  border-radius: var(--border-radius);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--padding-standard);
+  background-color: var(--very-pale-blue); /* Light mode */
+  transition: background-color 0.3s ease; /* Smooth transitions */
+}
+
+body.dark .container {
+  background-color: var(--dark-blue-blend); /* Ensure blending in dark mode */
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+  body {
+    padding: calc(var(--padding-standard) * 2);
+  }
+}

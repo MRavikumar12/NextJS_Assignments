@@ -1,0 +1,32 @@
+.pricingCard {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .heading {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--dark-desaturated-blue);
+    margin-bottom: 20px;
+  }
+  
+  .ctaText {
+    color: var(--light-red);
+    font-weight: 800;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  body.dark .pricingCard {
+    background-color: var(--dark-blue-blend);
+    color: var(--white);
+  }
+  
+  body.dark .heading {
+    color: var(--white);
+  }
+  

@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px; /* Adjusted for better spacing */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+  }
+  
+  .title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--dark-desaturated-blue); /* Default color for light mode */
+    transition: color 0.3s ease; /* Smooth transitions */
+  }
+  
+  body.dark .header {
+    background-color: var(--dark-blue-blend); /* Use darker background for better blending */
+  }
+  
+  body.dark .title {
+    color: var(--white); /* Ensure the title is white in dark mode */
+    opacity: 1; /* Ensure full visibility */
+  }
+  
+  body.dark .toggleButton {
+    background: var(--dark-blue-blend); /* Make sure the toggle button blends well */
+    color: var(--white);
+  }
+  

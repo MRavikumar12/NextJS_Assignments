@@ -1,0 +1,14 @@
+.toggleButton {
+    background: var(--light-grayish-blue);
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+  
+body.dark .toggleButton {
+    background: var(--dark-blue-blend);
+    color: var(--white);
+    border: 1px solid var(--white); /* Optional: border for better visibility */
+}
